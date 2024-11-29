@@ -1,0 +1,21 @@
+[package]
+name = "openmls"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+openmls = { git = "https://github.com/openmls/openmls", tag = "openmls-v0.6.0" }
+uniffi = "0.28.2"
+
+[build-dependencies]
+uniffi_build = "0.28.2"     # Ensures `uniffi-bindgen` integration
+
+[lib]
+crate-type = ["staticlib"]
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "uniffi-bindgen.rs"
+
+[features]
+default = ["uniffi/cli"]

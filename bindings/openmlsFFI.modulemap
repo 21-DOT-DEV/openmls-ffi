@@ -1,0 +1,4 @@
+module openmlsFFI {
+    header "openmlsFFI.h"
+    export *
+}
